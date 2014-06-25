@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+   <!--
+       document_cmis Views 
+   -->
+
+    <record model="ir.ui.view" id="view_document_cmis_document_form">
+        <field name="name">view.document.cmis.document.form</field>
+        <field name="model">ir.attachment</field>
+	<field name="inherit_id" ref="base.view_attachment_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<field name="res_id" position="after">
+			<field name="cmis_object_id"/>
+		</field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_document_cmis_directory_form">
+        <field name="name">view.document.cmis.directory.form</field>
+        <field name="model">document.directory</field>
+	<field name="inherit_id" ref="document.view_document_directory_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<field name="ressource_id" position="after">
+			<field name="cmis_object_id"/>
+<!--			<field name="company_specific"/>-->
+		</field>
+        </field>
+    </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+invoice_autolink_user,Invoice Autolink User,model_account_invoice_autolink,base.group_document_user,1,1,1,1

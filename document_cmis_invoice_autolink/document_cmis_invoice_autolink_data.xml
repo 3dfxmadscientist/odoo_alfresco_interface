@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="cmis_server_invoice_autolink_directory" model="ir.config_parameter">
+            <field name="key">document_cmis.invoice_autolink_directory</field>
+            <field name="value">workspace://SpacesStore/1b804a30-fd2a-42b3-af9f-4a35462faecd (To change by your own Alfresco Ressouce Key)</field>
+        </record>
+
+
+    </data>
+</openerp>

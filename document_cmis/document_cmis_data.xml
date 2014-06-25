@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+
+        <record id="cmis_server_url" model="ir.config_parameter">
+            <field name="key">document_cmis.server_url</field>
+            <field name="value">http://localhost:8080/alfresco/s/cmis</field>
+        </record>
+
+        <record id="cmis_server_link_url" model="ir.config_parameter">
+            <field name="key">document_cmis.server_link_url</field>
+            <field name="value">http://localhost:8080/share/page/document-details?noderef=</field>
+        </record>
+
+        <record id="cmis_server_mode" model="ir.config_parameter">
+            <field name="key">document_cmis.server_mode</field>
+            <field name="value">cmis_only</field>
+        </record>
+
+    </data>
+</openerp>

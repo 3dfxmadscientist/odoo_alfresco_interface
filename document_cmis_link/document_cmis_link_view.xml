@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="document_cmis_link_form" model="ir.ui.view">
+            <field name="name">document.cmis.link.form</field>
+            <field name="model">document.cmis.link</field>
+            <field name="arch" type="xml">
+                <form string="Search for Documents to Attach" version="7.0">
+                    <!--
+                    <p class="oe_grey">
+		Looks for any documents in Alfresco loading directory having the same filename then the supplier invoice reference.
+                If a document is found, that document is then attached to the ressource
+                    </p>
+-->
+                    <field name="document_ids" nolabel="1"/>
+
+                    <footer>
+                        <button string="Attach Documents" name="cmis_document_link" type="object" default_focus="1" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="document_cmis_link_doc_tree" model="ir.ui.view">
+            <field name="name">document.cmis.link.doc.tree</field>
+            <field name="model">document.cmis.link.doc</field>
+            <field name="arch" type="xml">
+                <tree string="Links">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_document_cmis_directory_dropoff_form">
+            <field name="name">view.document.cmis.directory.dropoff.form</field>
+            <field name="model">document.directory</field>
+            <field name="inherit_id" ref="document_cmis.view_document_cmis_directory_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="cmis_object_id" position="after">
+                    <field name="cmis_dropoff"/>
+                </field>
+            </field>
+        </record>
+
+
+        <act_window id="action_document_cmis_link_invoice"
+   	        name="Search for CMIS Documents"
+	        src_model="account.invoice"
+            res_model="document.cmis.link" 
+            view_mode="form" 
+            view_type="form"
+            target="new" 
+	    />
+
+
+    </data>
+</openerp>

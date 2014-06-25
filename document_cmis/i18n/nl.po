@@ -1,0 +1,20 @@
+# Dutch translation for a Smart Solution module
+# Copyright (c) 2012-Today Smart Solution
+# FIRST AUTHOR <fabian.semal@smartsolution.be>
+#
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2013-06-07 19:37+0000\n"
+"PO-Revision-Date: 2013-07-13 22:42+0000\n"
+"Last-Translator: Fabian Semal <fabian.semal@smartsolution.be>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+#. module: lunch
+#: field:lunch.product,category_id:0
+#: field:lunch.product.category,name:0
+msgid "Category"
+msgstr "Categorie"
+
